@@ -3,49 +3,12 @@
 Giveme5W is an open-source system to extract answers to the five journalistic W questions (5Ws). The 5Ws describe the main event of a news articles, i.e., who did what, when, where, and why. Giveme5W can be accessed by other software as a Python library and via a RESTful API. The extraction performance is p=0.7.
 
 ## Getting started
-Before you can use Giveme5W, you need to make sure you have a CoreNLP-server up and running.
-In the case you first to have to install CoreNLP please refer to the CoreNLPs extensive [documentation](https://stanfordnlp.github.io/CoreNLP/corenlp-server.html) and follow the instructions on how to install CoreNLP and start a server.
 
-download version stanford-ner-2015-12-09 from https://nlp.stanford.edu/software/CRF-NER.shtml#Download (the tool was tested with stanford-ner-2015-12-09)
-unzip into /Giveme5W/extractor/resources (so that /Giveme5W/extractor/resources/stanford-ner-2015-12-09 exists) (if you downloaded a stanford ner version, you need to rename the folder so that it is named stanford-ner-2015-12-09)
-
-pip3 install -r requirements.txt
-
-Starting the CoreNLP server: 
-```
-$ nohup java -mx4g edu.stanford.nlp.pipeline.StanfordCoreNLPServer 9000 &
-```
-
-### (Optional) Configuration
-If you are running CoreNLP on a different port or machine you have to first adjust the network settings for the prerpocessor:
-
-(Bsp: extractor/examples/simple_api.py)
-```python
-# CoreNLP host
-core_nlp_host = 'localhost:9000'
-```
-
-For the RESTapi it is also possible to network config:
-```python
-# basic configuration of the rest api
-app = Flask(__name__)
-log = logging.getLogger(__name__)
-host = None
-port = 5000
-debug = False
-options = None
-```
-
-You can also adjust the extractors which are used to examine the documents:
-```python
-# If desired, the selection of extractors can be changed and passed to the FiveWExtractor at initialization
-    extractor_list = [
-        action_extractor.ActionExtractor(),             # who & what
-        environment_extractor.EnvironmentExtractor(),   # when & where
-        cause_extractor.CauseExtractor()                # why
-    ]
-    extractor = FiveWExtractor(preprocessor, extractor_list)
-```
+### Installation
+1. Clone the repository
+2. Stanford NER: Download version `stanford-ner-2015-12-09` from https://nlp.stanford.edu/software/CRF-NER.shtml#Download (the tool was tested with stanford-ner-2015-12-09, other versions may work as well)
+3. Unzip its contents into /Giveme5W/extractor/resources (afterward, /Giveme5W/extractor/resources/stanford-ner-2015-12-09 needs to exist) 
+4. `pip3 install -r requirements.txt`
 
 ### Start the python script
 ```
