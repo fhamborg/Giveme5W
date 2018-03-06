@@ -11,8 +11,11 @@ Giveme5W is an open-source system to extract answers to the five journalistic W 
 4. `pip3 install -r requirements.txt`
 
 ### Start the python script
+
+TODO: update pathes, and add also the single article example
+
 ```
-$ python extractor/examples/simple_api.py
+$ python3 extractor/examples/simple_api.py
 ```
 
 Now you can send articles through the RESTapi to Giveme5W. 
