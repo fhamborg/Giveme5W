@@ -6,7 +6,8 @@ Giveme5W is an open-source system to extract answers to the five journalistic W 
 Before you can use Giveme5W, you need to make sure you have a CoreNLP-server up and running.
 In the case you first to have to install CoreNLP please refer to the CoreNLPs extensive [documentation](https://stanfordnlp.github.io/CoreNLP/corenlp-server.html) and follow the instructions on how to install CoreNLP and start a server.
 
-use 3.6 https://stanfordnlp.github.io/CoreNLP/history.html
+download 3.6 from https://stanfordnlp.github.io/CoreNLP/history.html
+unzip into /Giveme5W/extractor/resources (so that /Giveme5W/extractor/resources/stanford-corenlp-full-2015-12-09 exists)
 
 Starting the CoreNLP server: 
 ```
