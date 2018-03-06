@@ -5,6 +5,7 @@ from extractor.document import Document
 from extractor.five_w_extractor import FiveWExtractor
 
 extractor = FiveWExtractor()
+log = logging.getLogger(__name__)
 ch = logging.StreamHandler()
 ch.setLevel(logging.DEBUG)
 log.addHandler(ch)
