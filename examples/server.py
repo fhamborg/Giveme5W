@@ -37,5 +37,6 @@ def extract():
 
     return jsonify(document.questions)
 
+
 if __name__ == "__main__":
     run()

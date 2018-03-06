@@ -42,10 +42,3 @@ Why: %s
                self.questions['where'],
                self.questions['who'],
                self.questions['why']))
-
-if __name__ == '__main__':
-    doc = Document('Titel', 'Beschreibung')
-    doc.questions['who'] = 'Me'
-    doc.questions['where'] = 'Test'
-
-    print(doc)

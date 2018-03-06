@@ -1,8 +1,14 @@
 from .abs_extractor import AbsExtractor
 from copy import deepcopy
 import dateutil.parser as dparser
+import datetime
+
 
 class EnvironmentExtractor(AbsExtractor):
+    _epoch = datetime.datetime.utcfromtimestamp(0)
+
+    def unix_time_millis(self, dt):
+        return (dt - self._epoch).total_seconds() * 1000.0
 
     def extract(self, document):
         """
@@ -141,13 +147,11 @@ class EnvironmentExtractor(AbsExtractor):
         for candidate in ranked_candidates:
             score = deepcopy(weights[3])
             try:
-                dparser.parse(' '.join(candidate[0]), fuzzy=True)
+                candidate_date = dparser.parse(' '.join(candidate[0]), fuzzy=True)
+                candidate.append(self.unix_time_millis(candidate_date))
             except ValueError as e:
                 score = 0
             candidate[1] += score
 
         ranked_candidates.sort(key=lambda x: x[1], reverse=True)
         return ranked_candidates
-
-
-
