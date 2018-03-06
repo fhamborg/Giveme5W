@@ -1,12 +1,6 @@
 # Giveme5W
 
-Giveme5W is a state of the art open-source 5W Question Answering system for news articles. It can either be used through a simple RESTapi or directly included in existing Python projects. Depending on the configuration Giveme5W parses each document for the answers to the following  questions:
-
-* **Who** is involved?
-* **What** happened?
-* **Where** did it take place?
-* **When** did it happen?
-* **Why** did it happen?
+Giveme5W is an open-source system to extract answers to the five journalistic W questions (5Ws). The 5Ws describe the main event of a news articles, i.e., who did what, when, where, and why. Giveme5W can be accessed by other software as a Python library and via a RESTful API. The extraction performance is p=0.7.
 
 ## Getting started
 Before you can use Giveme5W, you need to make sure you have a CoreNLP-server up and running.
@@ -61,7 +55,7 @@ The API supports the following JSON fields:
 * text
 
 ## How to cite
-If you are using news-please, please cite our [paper](http://www.gipp.com/wp-content/papercite-data/pdf/hamborg2017.pdf) ([ResearchGate](https://www.researchgate.net/publication/314072045_news-please_A_Generic_News_Crawler_and_Extractor), [Mendeley](https://www.mendeley.com/research-papers/newsplease-generic-news-crawler-extractor/)):
+If you are using Giveme5W, please cite our [paper](http://www.gipp.com/wp-content/papercite-data/pdf/hamborg2018.pdf) ([ResearchGate](https://www.researchgate.net/publication/323582278_Giveme5W_Main_Event_Retrieval_from_News_Articles_by_Extraction_of_the_Five_Journalistic_W_Questions)):
 ```
 @InProceedings{Hamborg2018,
   author    = {Hamborg, Felix and Lachnit, Soeren and Schubotz, Moritz and Hepp, Thomas and Gipp, Bela},
