@@ -26,6 +26,10 @@ def run():
 @app.route('/extract', methods=['GET', 'POST'])
 def extract():
     json_article = request.get_json()
+    if not json_article:
+        log.warning("received no article")
+        return jsonify({"error": "no article defined"})
+
     log.debug("retrieved raw article for extraction: %s", json_article['title'])
 
     document = Document(json_article['title'], json_article['description'], json_article['text'])
