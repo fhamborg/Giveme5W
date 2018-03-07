@@ -19,15 +19,18 @@ $ python3 examples/fivew_single_article.py
 ```
 
 ### Access via RESTful API
+Giveme5W provides a RESTful API to which you can send a news article. First, start the server script.
 ```
 $ python3 examples/server.py
 ```
-Now you can send articles through the RESTapi to Giveme5W. 
-The API supports the following JSON fields:
 
-* title (always required!)
-* description
-* text
+Starting up the server may take a few moments. Once the server is running, you can send `GET` and `POST` requests to `http://localhost:5000/extract`. You send a single JSON object, that needs to contain at least one of the following fields: 
+
+* `title` 
+* `description` (the lead paragraph) 
+* `text` (the remainder of the text)
+
+For instance, if your data contains only the headline and the full text of the article, you could send a request containing the headline in the `title` field, and the full text in the `text` field. Giveme5W also supports natively articles extracted by the news crawler and extractor [news-please](https://github.com/fhamborg/news-please).
 
 ## How to cite
 If you are using Giveme5W, please cite our [paper](http://www.gipp.com/wp-content/papercite-data/pdf/hamborg2018.pdf) ([ResearchGate](https://www.researchgate.net/publication/323582278_Giveme5W_Main_Event_Retrieval_from_News_Articles_by_Extraction_of_the_Five_Journalistic_W_Questions)):
