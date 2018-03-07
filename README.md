@@ -9,7 +9,7 @@ Note that we currently work on an improved version of Giveme5W, which will be av
 ### Installation
 1. Clone the repository
 2. Stanford NER: Download version `stanford-ner-2015-12-09` from https://nlp.stanford.edu/software/CRF-NER.shtml#Download (the tool was tested with stanford-ner-2015-12-09, other versions may work as well)
-3. Unzip its contents into /Giveme5W/extractor/resources (afterward, /Giveme5W/extractor/resources/stanford-ner-2015-12-09 needs to exist) 
+3. Unzip its contents into `/Giveme5W/extractor/resources` (afterward, `/Giveme5W/extractor/resources/stanford-ner-2015-12-09` needs to exist) 
 4. `pip3 install -r requirements.txt`
 
 ### Use within your own code
