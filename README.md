@@ -2,6 +2,8 @@
 
 Giveme5W is an open-source system to extract answers to the five journalistic W questions (5Ws). The 5Ws describe the main event of a news articles, i.e., who did what, when, where, and why. Giveme5W can be accessed by other software as a Python library and via a RESTful API. The extraction performance is p=0.7.
 
+Note that we currently work on an improved version of Giveme5W, which will be available here very soon.
+
 ## Getting started
 
 ### Installation
@@ -10,14 +12,16 @@ Giveme5W is an open-source system to extract answers to the five journalistic W 
 3. Unzip its contents into /Giveme5W/extractor/resources (afterward, /Giveme5W/extractor/resources/stanford-ner-2015-12-09 needs to exist) 
 4. `pip3 install -r requirements.txt`
 
-### Start the python script
-
-TODO: update pathes, and add also the single article example
-
+### Use within your own code
+If you want to extract the 5Ws from a single article, have a look at the script `examples/fivew_single_article.py`. 
 ```
-$ python3 extractor/examples/simple_api.py
+$ python3 examples/fivew_single_article.py
 ```
 
+### Access via RESTful API
+```
+$ python3 examples/server.py
+```
 Now you can send articles through the RESTapi to Giveme5W. 
 The API supports the following JSON fields:
 
