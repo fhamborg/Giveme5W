@@ -9,7 +9,7 @@ Note that we currently work on an improved version of Giveme5W, which will be av
 ### Installation
 The following steps setup Giveme5W on a Linux system. If you are using MacOS, see the [installation wiki](https://github.com/fhamborg/Giveme5W/wiki/Installation). 
 1. Clone the repository
-2. Stanford NER: Download version `stanford-ner-2015-12-09` from https://nlp.stanford.edu/software/CRF-NER.shtml#Download (the tool was tested with stanford-ner-2015-12-09, other versions may work as well)
+2. Stanford NER: Download version `stanford-ner-2015-12-09` from the [Stanford NER website](https://nlp.stanford.edu/software/CRF-NER.shtml#Download) (the tool was tested with stanford-ner-2015-12-09, other versions may work as well)
 3. Unzip its contents into `/Giveme5W/extractor/resources` (afterward, `/Giveme5W/extractor/resources/stanford-ner-2015-12-09` needs to exist) 
 4. `pip3 install -r requirements.txt`
 
