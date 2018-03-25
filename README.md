@@ -14,15 +14,19 @@ The following steps setup Giveme5W on a Linux system. If you are using MacOS, se
 4. `pip3 install -r requirements.txt`
 
 ### Use within your own code
-
+Invoking Giveme5W is straightforward - it only requires a couple of lines of codes, and Giveme5W takes care of the rest! If you want to extract the 5Ws from a single article, run the following code.
 ```
 from extractor.document import Document
 from extractor.five_w_extractor import FiveWExtractor
 
 extractor = FiveWExtractor()
 
-document = Document(title, description, full_text)
+document = Document(article_text)
 extractor.parse(document)
+```
+Note that while Giveme5W allows you to just put in an article's whole text (including or excluding the headline), you can also separately pass the headline, lead paragraph (which we call description), and main text.
+```
+document = Document(title, description, text)
 ```
 
 Afterward, you can access the questions and their answers, e.g.:
