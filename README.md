@@ -31,6 +31,7 @@ document = Document(title, description, text)
 
 Afterward, you can access the questions and their answers, e.g.:
 ```
+import pprint
 pp = pprint.PrettyPrinter(indent=4)
 pp.pprint(document.questions)
 ```
