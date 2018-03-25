@@ -14,7 +14,25 @@ The following steps setup Giveme5W on a Linux system. If you are using MacOS, se
 4. `pip3 install -r requirements.txt`
 
 ### Use within your own code
-If you want to extract the 5Ws from a single article, have a look at the script [`examples/fivew_single_article.py`](https://github.com/fhamborg/Giveme5W/blob/master/examples/fivew_single_article.py). You can also run this script to see how Giveme5W works.
+
+```
+from extractor.document import Document
+from extractor.five_w_extractor import FiveWExtractor
+
+extractor = FiveWExtractor()
+
+document = Document(title, description, full_text)
+extractor.parse(document)
+```
+
+Afterward, you can access the questions and their answers, e.g.:
+```
+pp = pprint.PrettyPrinter(indent=4)
+pp.pprint(document.questions)
+```
+
+### Example script
+Giveme5W also includes an example [script](https://github.com/fhamborg/Giveme5W/blob/master/examples/fivew_single_article.py) that can runs out of the box.
 ```
 $ python3 examples/fivew_single_article.py
 ```
