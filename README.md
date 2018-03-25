@@ -14,7 +14,7 @@ The following steps setup Giveme5W on a Linux system. If you are using MacOS, se
 4. `pip3 install -r requirements.txt`
 
 ### Use within your own code
-If you want to extract the 5Ws from a single article, have a look at the script `examples/fivew_single_article.py`. You can also run this script to see how Giveme5W works.
+If you want to extract the 5Ws from a single article, have a look at the script [`examples/fivew_single_article.py`](https://github.com/fhamborg/Giveme5W/blob/master/examples/fivew_single_article.py). You can also run this script to see how Giveme5W works.
 ```
 $ python3 examples/fivew_single_article.py
 ```
