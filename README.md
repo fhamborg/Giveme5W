@@ -21,7 +21,7 @@ from extractor.five_w_extractor import FiveWExtractor
 
 extractor = FiveWExtractor()
 
-document = Document(article_text)
+document = Document(articletext)
 extractor.parse(document)
 ```
 Note that while Giveme5W allows you to just put in an article's whole text (including or excluding the headline), you can also separately pass the headline, lead paragraph (which we call description), and main text.
@@ -47,13 +47,17 @@ Giveme5W provides a RESTful API to which you can send a news article. First, sta
 $ python3 examples/server.py
 ```
 
-Starting up the server may take a few moments. Once the server is running, you can send `GET` and `POST` requests to `http://localhost:5000/extract`. You send a single JSON object, that needs to contain at least one of the following fields: 
+Starting up the server may take a few moments. Once the server is running, you can send `GET` and `POST` requests to `http://localhost:5000/extract`. You can send a single JSON object that needs to contain the text of an article, i.e., a field named 
+
+* `articletext` (the text of the article including or excluding the headline)
+
+Alternatively, you can also distinctively send the headline, lead paragraph, and the full text:
 
 * `title` 
 * `description` (the lead paragraph) 
 * `text` (the remainder of the text)
 
-For instance, if your data contains only the headline and the full text of the article, you could send a request containing the headline in the `title` field, and the full text in the `text` field. If you have the whole article in one text, simple put the whole text in either of the fields, and leave the others empty. Giveme5W also supports natively articles extracted by the news crawler and extractor [news-please](https://github.com/fhamborg/news-please).
+Giveme5W supports natively articles extracted by our news crawler and extractor [news-please](https://github.com/fhamborg/news-please).
 
 ## How to cite
 If you are using Giveme5W, please cite our [paper](http://www.gipp.com/wp-content/papercite-data/pdf/hamborg2018.pdf) ([ResearchGate](https://www.researchgate.net/publication/323582278_Giveme5W_Main_Event_Retrieval_from_News_Articles_by_Extraction_of_the_Five_Journalistic_W_Questions), [Mendeley](https://www.mendeley.com/research-papers/giveme5w-main-event-retrieval-news-articles-extraction-five-journalistic-w-questions/?utm_source=desktop&utm_medium=1.17.13&utm_campaign=open_catalog&userDocumentId=%7B6945b48b-a775-4b85-b09b-f321b316f6da%7D)):
