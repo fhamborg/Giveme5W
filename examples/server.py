@@ -29,10 +29,20 @@ def extract():
     if not json_article:
         log.warning("received no article")
         return jsonify({"error": "no article defined"})
-
+    
+    article = {}
+    if json_article.get('title'):
+        article['title'] = json_article.get('title')
+        article['description'] = json_article.get('description')
+        article['text'] = json_article.get('text')
+    else:
+        article['title'] = json_article['articletext']
+        article['description'] = None
+        article['text'] = None
+    
     log.debug("retrieved raw article for extraction: %s", json_article['title'])
-
-    document = Document(json_article['title'], json_article['description'], json_article['text'])
+    
+    document = Document(article['title'], article['description'], article['text'])
     extractor.parse(document)
 
     return jsonify(document.questions)
