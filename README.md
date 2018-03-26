@@ -37,7 +37,7 @@ pp.pprint(document.questions)
 ```
 
 ### Example script
-Giveme5W also includes an example [script](https://github.com/fhamborg/Giveme5W/blob/master/examples/fivew_single_article.py) that can runs out of the box.
+Giveme5W also includes an example [script](https://github.com/fhamborg/Giveme5W/blob/master/examples/fivew_single_article.py) that runs out of the box.
 ```
 $ python3 examples/fivew_single_article.py
 ```
