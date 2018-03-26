@@ -48,7 +48,7 @@ Giveme5W provides a RESTful API to which you can pass a news article. First, sta
 $ python3 examples/server.py
 ```
 
-Starting up the server may take a few moments. Once the server is running, you can pass `GET` and `POST` requests to `http://localhost:5000/extract`. Simply pass a single JSON object that needs to contain the text of an article, i.e., a field named 
+Starting up the server takes a few seconds. Once the server is running, you can send `GET` and `POST` requests to `http://localhost:5000/extract`. Simply pass a single JSON object that needs to contain the text of an article, i.e., a field named 
 
 * `articletext` (the text of the article including or excluding the headline)
 
