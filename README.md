@@ -58,7 +58,7 @@ Alternatively, you can also distinctively pass the headline, lead paragraph, and
 * `description` (the lead paragraph) 
 * `text` (the remainder of the text)
 
-Giveme5W supports natively articles extracted by our news crawler and extractor [news-please](https://github.com/fhamborg/news-please).
+Giveme5W natively supports articles extracted by our news crawler and extractor [news-please](https://github.com/fhamborg/news-please).
 
 ## How to cite
 If you are using Giveme5W, please cite our [paper](http://www.gipp.com/wp-content/papercite-data/pdf/hamborg2018.pdf) ([ResearchGate](https://www.researchgate.net/publication/323582278_Giveme5W_Main_Event_Retrieval_from_News_Articles_by_Extraction_of_the_Five_Journalistic_W_Questions), [Mendeley](https://www.mendeley.com/research-papers/giveme5w-main-event-retrieval-news-articles-extraction-five-journalistic-w-questions/?utm_source=desktop&utm_medium=1.17.13&utm_campaign=open_catalog&userDocumentId=%7B6945b48b-a775-4b85-b09b-f321b316f6da%7D)):
