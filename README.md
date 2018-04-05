@@ -69,7 +69,9 @@ If you are using Giveme5W, please cite our [paper](http://www.gipp.com/wp-conten
   booktitle = {Proceedings of the iConference 2018},
   year      = {2018},
   month     = {March},
-  location  = {Sheffield, UK}
+  location  = {Sheffield, UK},
+  url       = {https://doi.org/10.1007/978-3-319-78105-1_39},
+  doi       = {10.1007/978-3-319-78105-1_39}
 }
 ```
 You can find more information on this and other news projects on our [website](https://felix.hamborg.eu/).
