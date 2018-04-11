@@ -1,5 +1,7 @@
 # Giveme5W
 
+<img align="right" height="128px" src="https://github.com/fhamborg/Giveme5W/raw/master/misc/logo-256.png" /> 
+
 Giveme5W is an open-source system to extract answers to the five journalistic W questions (5Ws). The 5Ws describe the main event of a news articles, i.e., who did what, when, where, and why. Giveme5W can be accessed by other software as a Python library and via a RESTful API. The extraction performance is p=0.7.
 
 Note that we currently work on an improved version of Giveme5W, which will be available here very soon.
@@ -83,5 +85,7 @@ Do you want to contribute? Great, we are always happy for any support on this pr
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use Giveme5W except in compliance with the License. A copy of the License is included in the project, see the file [LICENSE.txt](LICENSE.txt).
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+
+The Giveme5W logo is courtesy of [Mario Hamborg](https://mario.hamborg.eu/). 
 
 Copyright 2017-2018 The Giveme5W team
