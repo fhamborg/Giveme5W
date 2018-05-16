@@ -1,3 +1,6 @@
+# Announcement
+We recommend using our new, extended 5W extraction system [Giveme5W1H](https://github.com/fhamborg/Giveme5W1H), which has various advantages, most importantly: (1) better extraction performance, (2) extraction of the 'how' question, and (3) easier installation. The Giveme5W repository (the one that contains this page) is not maintained any longer.
+
 # Giveme5W
 
 <img align="right" height="128px" src="https://github.com/fhamborg/Giveme5W/raw/master/misc/logo-256.png" /> 
